@@ -10,8 +10,12 @@
 1.  Install turtlebot
 
    1.   `sudo apt-get install ros-kinetic-turtlebot-apps`
-
-1.  In your environment set `TURTLEBOT_3D_SENSOR=astra`
+   
+1.  Setup for Astra camera
+   1.   `sudo wget https://raw.githubusercontent.com/orbbec/ros_astra_camera/master/56-orbbec-usb.rules -P /etc/udev/rules.d/`
+   1.  Reboot the dragonboard so that the new udev rule will apply.
+   1.   `sudo apt-get install ros-kinetic-astra-camera ros-kinetic-astra-launch`
+   1.  In your environment set `TURTLEBOT_3D_SENSOR=astra`
 
 1.  You can now continue to the standard [TurtleBot Tutorials](http://wiki.ros.org/Robots/TurtleBot).
 
